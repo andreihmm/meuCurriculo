@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.subheader {
+    background-color: #4F518C;
+    display: flex;
+}
+
+.subheader h1 {
+    background-color: #2C2A4A;
+    color: #DABFFF;
+    margin-left: 20vw;
+    font-size: 50px;
+    height: 100%;
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    padding-left: 10vw;
+}
+
+#menuzao {
+    width: 100%;
+    background-color: #4F518C;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    width: 100%;
+    height: 20vh;
+    align-items: center;
+    display: flex;
+    font-size: 40px;
+    font-weight: bold;
+
+}
+
+header#inicio {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+header ul {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+header ul a {
+    background-color: #2C2A4A;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+header ul li {
+    color: #DABFFF;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+header ul a:hover>li {
+    background-color: #DABFFF;
+    color: #2C2A4A;
+}
+
+header ul a:not(:last-child) {
+    border-right: solid 2px #DABFFF;
+}
+
+
+nav {
+    display: flex;
+}
+
+nav #esquerda,
+nav #direita {
+    width: 50%;
+}
+
+nav #esquerda {
+    color: #DABFFF;
+    padding: 5%;
+    background-color: #4F518C;
+
+}
+
+nav #esquerda h1 {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+nav #esquerda p {
+    font-size: 35px;
+    padding-left: 5px;
+}
+
+
+nav #direita {
+    background-color: #907AD6;
+    display: flex;
+    align-items: center;
+}
+
+nav #direita img {
+    width: 100%;
+}
+
+#portfolio {
+    height: 100vh;
+
+}
+
+#prints {
+    background-color: #907AD6;
+    height: 80vh;
+    width: 100%;
+
+}
+
+#prints img {
+    border: solid 2px;
+    width: 35vw;
+    height: 35vh;
+    margin: 20px;
+    max-height: 300px;
+}
+
+#linha1,
+#linha2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50%;
+}
+
+div#servicos {
+    height: 100vh;
+    background-color: olive;
+}
+
+#conteudo {
+    background-color: red;
+    display: flex;
+    height: 80vh;
+}
+
+#servicos_esquerda {
+    background-color: #4F518C;
+    width: 60%;
+    color: #DABFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#servicos_direita {
+    background-color: #4F518C;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#servicos_direita img {
+    width: 70%;
+    height: auto;
+    max-height: 600px;
+}
+
+#servicos_texto {
+    padding: 5%;
+    font-size: 80px;
+}
+
+#servicos_texto h1 {
+    margin-right: 2%;
+    font-size: 3rem;
+    font-style: bold;
+    border-bottom: solid #DABFFF 1px;
+    padding-right: 5%;
+}
+
+#servicos_texto p {
+    margin-top: 5%;
+    font-size: 1.5rem;
+}
+
+#redes_sociais img {
+    height: 40px
+}
+
+.seçoes {
+    background-color: #DABFFF;
+    display: flex;
+    align-items: center;
+    padding: 4vh;
+    width: 100%;
+    padding-left: 45vw;
+}
+
+.seçoes h4 {
+    padding-left: 10px;
+}
+
+h1,
+li {
+    font-family: sans-serif;
+}
+
+h4,
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
