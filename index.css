@@ -115,25 +115,48 @@ nav #esquerda p {
 
 
 nav #direita {
-    background-color: #907AD6;
+    background-color: #4F518C;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 nav #direita img {
-    width: 100%;
+    width: 40%;
+    border-radius: 50%;
 }
 
 #portfolio {
-    height: 100vh;
-
+    display: flex;
+    flex-direction: column;
 }
 
 #prints {
     background-color: #907AD6;
-    height: 80vh;
     width: 100%;
 
+}
+
+#principal {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#principal p {
+    width: 50%;
+    background-color: #b8abe2;
+    font-size: 1.42em;
+    margin-bottom: 50px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#printfortes {
+    height: 50%;
+    width: 80%;
 }
 
 #prints img {
@@ -152,9 +175,27 @@ nav #direita img {
     height: 50%;
 }
 
-div#servicos {
-    height: 100vh;
+#textosecundario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pst {
+    width: 50%;
+    background-color: #b8abe2;
+    font-size: 1.42em;
+    margin-bottom: 50px;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+}
+
+
+#servicos {
+    display: flex;
     background-color: olive;
+    flex-direction: column;
 }
 
 #conteudo {
@@ -227,6 +268,7 @@ li {
 }
 
 h4,
-p {
+p,
+h3 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
