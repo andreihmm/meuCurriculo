@@ -6,6 +6,7 @@
 
 h1 {
     font-size: 4vw;
+    color: #000000;
 }
 
 h2 {
@@ -14,6 +15,7 @@ h2 {
 
 p {
     font-size: 3vh;
+    color: #000000;
 }
 
 .subheader {
@@ -43,7 +45,7 @@ p {
 
 header {
     width: 100%;
-    height: 20vh;
+    height: 15vh;
     align-items: center;
     display: flex;
     font-size: 40px;
@@ -52,8 +54,6 @@ header {
 }
 
 header#inicio {
-    width: 100%;
-    align-items: center;
     justify-content: center;
 }
 
@@ -91,6 +91,8 @@ a:visited {
 header ul a:hover>li {
     background-color: #DABFFF;
     color: #2C2A4A;
+    transition: 0.3s ease-in-out;
+
 }
 
 header ul a:not(:last-child) {
@@ -101,6 +103,11 @@ header ul a:not(:last-child) {
 nav {
     display: flex;
     width: 100%;
+    background-color: #F4EFFA;
+}
+
+nav#introducao {
+    min-height: 80vh;
 }
 
 nav #esquerda,
@@ -109,9 +116,8 @@ nav #direita {
 }
 
 nav #esquerda {
-    color: #DABFFF;
+    color: #000000;
     padding: 5%;
-    background-color: #4F518C;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -127,7 +133,6 @@ nav #esquerda p {
 
 
 nav #direita {
-    background-color: #4F518C;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -144,8 +149,15 @@ nav #direita img {
     flex-direction: column;
 }
 
+.portfoliotitulo {
+    background-color: #C8B1E4;
+    padding: 40px;
+    margin: 40px;
+    border-radius: 15px;
+}
+
 #portfolioconteudo {
-    background-color: #907AD6;
+    background-color: #F4EFFA;
     width: 100%;
 
 }
@@ -158,9 +170,6 @@ nav #direita img {
     justify-content: center;
 }
 
-#principal h1 {
-    padding: 40px;
-}
 
 .pt {
     width: 50%;
@@ -172,18 +181,22 @@ nav #direita img {
 }
 
 #principal h3 {
+    margin-top: 40px;
     margin: 15px;
 }
 
 #pa {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 55vh;
 }
 
 #printfortes {
     width: 50%;
     border-radius: 5px;
     border: solid 1px black;
+    height: fit-content;
 }
 
 #printfortes:hover {
@@ -216,18 +229,18 @@ nav #direita img {
 
 #servicos {
     display: flex;
-    background-color: olive;
+    background-color: #F4EFFA;
     flex-direction: column;
 }
 
-#conteudo {
-    background-color: red;
+#servicos_conteudo {
+    background-color: #F4EFFA;
     display: flex;
     height: 80vh;
+    justify-content: center;
 }
 
 #servicos_esquerda {
-    background-color: #4F518C;
     width: 60%;
     color: #DABFFF;
     display: flex;
@@ -236,7 +249,6 @@ nav #direita img {
 }
 
 #servicos_direita {
-    background-color: #4F518C;
     width: 40%;
     display: flex;
     align-items: center;
@@ -264,21 +276,30 @@ nav #direita img {
     margin-top: 5%;
 }
 
+#redes_sociais {
+    background-color: #C8B1E4;
+    width: 100%;
+}
+
 #redes_sociais img {
     height: 40px
 }
 
-.seçoes {
-    background-color: #DABFFF;
+.secoes {
     display: flex;
     align-items: center;
     padding: 4vh;
-    width: 100%;
-    padding-left: 45vw;
+    justify-content: center;
 }
 
-.seçoes h4 {
+.secoes h4 {
     padding-left: 10px;
+}
+
+.contatoclicavel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1,
@@ -327,6 +348,15 @@ h3 {
 
     nav #direita img {
         padding: 40px;
+    }
+
+    #pa {
+        height: 20vh;
+    }
+
+    #servicos_direita {
+        display: none;
+
     }
 
 }
