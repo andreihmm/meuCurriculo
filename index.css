@@ -256,7 +256,7 @@ nav #direita img {
     margin: 30px auto;
     padding-top: 50px;
     padding-bottom: 50px;
-    overflow-x: hidden;
+    overflow: inherit;
 }
 
 .carrossel-conteudo {
