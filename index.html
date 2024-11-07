@@ -6,125 +6,170 @@
     <title>Meu currículo</title>
     <link rel="stylesheet" href="index.css" type="text/css">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=VT323&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-    <header id="inicio">
-        <div id="menuzao">
-            <ul id="menu">
-                <a href="#portfolio" class="imm">
-                    <li>Portfólio</li>
-                </a>
-                <a href="#servicos" class="imm">
-                    <li> Serviços</li>
-                </a>
-                <a href="#contato" class="imm">
-                    <li>Contato</li>
-            </ul></a>
-            </ul>
-        </div>
-    </header>
 
-    <nav id="introducao">
-        <section id="esquerda">
-            <h1>Andrei Alves Fracalossi</h1>
-            <p>Meu nome é Andrei, tenho 19 anos e estou atualmente cursando o segundo período de ciência da computação
-                na UVV.</p>
-        </section>
-        <section id="direita">
-            <img src='fotominha.jpg' alt='Texto alternativo'>
-        </section>
-    </nav>
-
-    <div id="portfolio">
-        <header class="subheader">
-            <h1>Portfólio</h1>
-        </header>
-        <div id="portfolioconteudo">
-            <div id="principal">
-                <h1 class="portfoliotitulo">PROJETO PRINCIPAL</h1>
-                <a href="https://andreihmmm.github.io/prototipoFortes/notificacoes.html" target="_blank" id="pa">
-                    <img src="printfortes.png" alt="print do site" id="printfortes">
-                </a>
-                <h3>CLIQUE NAS IMAGENS PARA ACESSAR AS PÁGINAS!</h3>
-                <p class="pt">Esse projeto feito para a matéria de desenvolvimento de software para
-                    web e User Experience e conta com várias
-                    páginas interativas,
-                    um chat responsivo, e uma responsividade mobile que inclui um menu personalizado.
-                    Recomendo acessar o site para testar todas as funcionalidades e testar a responsividade!
-                </p>
-                <h1 class="portfoliotitulo">PROJETOS SECUNDÁRIOS</h1>
-
-            </div>
-            <div id="linha1">
-                <a href="https://andreihmmm.github.io/portfolio/" target="_blank"><img src="Screenshot_1.png"
-                        alt="foto1"></a>
-                <a href="https://andreihmmm.github.io/AULAfazersite/" target="_blank"><img src="Screenshot_2.png"
-                        alt="foto2"></a>
-            </div>
-            <div id="linha2">
-                <a href="https://andreihmmm.github.io/SIMULADO/" target="_blank"><img src="Screenshot_3.png"
-                        alt="foto3"></a>
-                <a href="https://andreihmmm.github.io/PROVAsoftwareweb/" target="_blank"><img src="Screenshot_4.png"
-                        alt="foto4"></a>
-            </div>
-            <div id="textosecundario">
-                <p class="pt">Esses projetos foram feitos com menos experiência
-                    e de maneira mais casual, resultando em sites mais
-                    irreverentes.
-                </p>
-            </div>
-        </div>
+    <div id="loading-screen">
+        <pre id="loading-text">navi-desktop > ~ > $ Carregando...</pre>
     </div>
-    <div id="servicos">
-        <header class="subheader">
-            <h1>Serviços</h1>
+
+    <video autoplay loop muted playsinline id="tvStatic">
+        <source src="tv-static.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div id="conteudoPagina">
+
+        <header id="inicio">
+            <div id="menuzao">
+                <ul id="menu">
+                    <a href="#portfolio" class="imm">
+                        <li>Portfólio</li>
+                    </a>
+                    <a href="#servicos" class="imm">
+                        <li> Serviços</li>
+                    </a>
+                    <a href="#contato" class="imm">
+                        <li>Contato</li>
+                    </a>
+                </ul>
+            </div>
         </header>
-        <div id="servicos_conteudo">
-            <div id="servicos_esquerda">
-                <div id="servicos_texto">
-                    <h1>Interesses:</h1>
-                    <p>Me interesso bastante por HTML/CSS, Java, C e Bancos de Dados (PostgreSQL, por exemplo.). Conheço
-                        comandos básicos de Linux.</p>
+
+        <nav id="introducao">
+
+            <section id="esquerda">
+                <div class="textBox">
+                    <h1>Andrei Alves Fracalossi</h1>
+                    <p>Meu nome é Andrei, tenho 20 anos e estou atualmente cursando ciências da computação
+                        na UVV.</p>
+                </div>
+            </section>
+            <section id="direita">
+                <img src='./assets/fotominha.jpg' alt='Texto alternativo'>
+            </section>
+        </nav>
+
+        <div id="portfolio">
+            <header class="subheader">
+                <h1>Portfólio</h1>
+            </header>
+            <div id="portfolioconteudo">
+                <div id="principal">
+                    <h1 class="portfoliotitulo">PROJETO PRINCIPAL</h1>
+                    <div>
+                        <a href="https://andreihmm.github.io/prototipoFortes/notificacoes.html" target="_blank" id="pa">
+                            <img src="./assets/printfortes.png" alt="print do site" id="printfortes">
+                        </a>
+                    </div>
+                    <h3>CLIQUE NAS IMAGENS PARA ACESSAR AS PÁGINAS!</h3>
+                    <p class="pt textBox">Esse projeto feito para a matéria de desenvolvimento de software para
+                        web e User Experience e conta com várias
+                        páginas interativas,
+                        um chat responsivo, e uma responsividade mobile que inclui um menu personalizado.
+                        Recomendo acessar o site para testar todas as funcionalidades e testar a responsividade!
+                    </p>
+                    <h1 class="portfoliotitulo">PROJETOS SECUNDÁRIOS</h1>
+                </div>
+
+                <!-- Novo Carrossel de Projetos -->
+                <div class="carrossel">
+                    <button class="nav-btn" id="prevBtn">&lt;</button>
+                    <div class="carrossel-conteudo">
+                        <div class="item ativo">
+                            <a href="https://andreihmm.github.io/portfolio/" target="_blank"><img
+                                    src="./assets/Screenshot_1.png" alt="foto1" class="imagemProjeto"></a>
+                        </div>
+                        <div class="item">
+                            <a href="https://andreihmm.github.io/AULAfazersite/" target="_blank"><img
+                                    src="./assets/Screenshot_2.png" alt="foto2" class="imagemProjeto"></a>
+                        </div>
+                        <div class="item">
+                            <a href="https://andreihmm.github.io/SIMULADO/" target="_blank"><img
+                                    src="./assets/Screenshot_3.png" alt="foto3" class="imagemProjeto"></a>
+                        </div>
+                        <div class="item">
+                            <a href="https://andreihmm.github.io/PROVAsoftwareweb/" target="_blank"><img
+                                    src="./assets/Screenshot_4.png" alt="foto4" class="imagemProjeto"></a>
+                        </div>
+                    </div>
+                    <button class="nav-btn" id="nextBtn">&gt;</button>
+                </div>
+
+
+                <div id="textosecundario">
+                    <p class="pt textBox">Esses projetos foram feitos com menos experiência
+                        e de maneira mais casual, resultando em sites mais
+                        irreverentes.
+                    </p>
                 </div>
             </div>
-            <div id="servicos_direita">
-                <img src='https://dspncdn.com/a1/media/692x/e4/5d/df/e45ddfae61304bf94241a010f52cd199.jpg'
-                    alt='Texto alternativo'>
+        </div>
+
+        <div id="servicos">
+            <header class="subheader">
+                <h1>Serviços</h1>
+            </header>
+            <div id="servicos_conteudo">
+                <div id="servicos_esquerda">
+                    <div id="servicos_texto" class="textBox">
+                        <h1>Interesses:</h1>
+                        <p>Me interesso bastante por HTML/CSS, Java, C e Bancos de Dados (PostgreSQL, por exemplo.).
+                            Conheço
+                            comandos básicos de Linux.</p>
+                    </div>
+                </div>
+                <div id="servicos_direita">
+                    <img src='./assets/lain1.gif' alt='Texto alternativo'>
+                </div>
             </div>
         </div>
-    </div>
-    <div id="contato">
-        <header class="subheader">
-            <h1>Contato</h1>
-        </header>
-        <div id="redes_sociais">
-            <div class="secoes"><a href="https://www.instagram.com/andrei_afr/" target="_blank"
-                    class="contatoclicavel"><img src='https://cdn-icons-png.flaticon.com/512/87/87390.png'
-                        alt="logo_instagram">
-                    <h4>@andrei_afr</h4>
-                </a>
+        <div id="contato">
+            <header class="subheader">
+                <h1>Contato</h1>
+            </header>
+            <div id="redes_sociais">
+                <div>
+                    <div class="secoes"><a href="https://www.instagram.com/andrei_afr/" target="_blank"
+                            class="contatoclicavel"><img src='https://cdn-icons-png.flaticon.com/512/87/87390.png'
+                                alt="logo_instagram">
+                            <h4>@andrei_afr</h4>
+                        </a>
+                    </div>
+                    <div class="secoes"><a href="
+                    https://github.com/andreihmm" target="_blank" class="contatoclicavel"><img
+                                src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="logo_github">
+                            <h4>andreihmm</h4>
+                        </a>
+                    </div>
+                    <div class="secoes"><a href="
+                    https://www.linkedin.com/in/andrei-alves-fracalossi-92b625264/" target="_blank"
+                            class="contatoclicavel"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png"
+                                alt="logo_likedin">
+                            <h4>Andrei Alves Fracalossi</h4>
+                        </a>
+                    </div>
+                </div>
+                <div id="LainDancando">
+                    <img src="./assets/lain4.gif" alt="Lain dançando">
+                </div>
             </div>
-            <div class="secoes"><a href="
-                https://github.com/andreihmmm" target="_blank" class="contatoclicavel"><img
-                        src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="logo_github">
-                    <h4>andreihmmm</h4>
-                </a>
-            </div>
-            <div class="secoes"><a href="
-                https://www.linkedin.com/in/andrei-alves-fracalossi-92b625264/" target="_blank"
-                    class="contatoclicavel"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png"
-                        alt="logo_likedin">
-                    <h4>Andrei Alves Fracalossi</h4>
-                </a>
-            </div>
+
 
         </div>
+
     </div>
 
-    <footer>
+    <script src="index.js"></script>
 
-    </footer>
 </body>
 
 </html>

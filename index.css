@@ -1,31 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@400&family=Merriweather:wght@400&family=Montserrat:wght@400&family=Poppins:wght@400&family=Playfair+Display:wght@400&family=Raleway:wght@400&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* Fonte padrão para o corpo do texto */
+
 }
 
 h1 {
-    font-size: 4vw;
-    color: #000000;
+    font-size: clamp(24px, 5vw, 48px);
+    color: #ffffff;
 }
 
 h2 {
-    font-size: 3.0vh;
+    font-size: clamp(20px, 4vw, 36px);
+    color: #ffffff;
+
+}
+
+h3 {
+    font-size: clamp(18px, 3.5vw, 28px);
+    color: #ffffff;
+
+}
+
+h1,
+h2,
+h3,
+li {
+    font-family: "VT323", monospace;
+    /* Aplica a fonte ao corpo do documento */
 }
 
 p {
     font-size: 3vh;
-    color: #000000;
+    color: #ffffff;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'IBM Plex Mono', monospace;
+    /* Aplica a fonte ao corpo do documento */
+}
+
+/* Style the video to cover the nav background */
+#tvStatic {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    /* Send video to the back */
+}
+
+/* Tela de carregamento estilo terminal */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    /* Fundo preto para imitar um terminal */
+    /* Texto verde para efeito de terminal */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Aplica a fonte ao corpo do documento */
+    font-size: 1.2em;
+    z-index: 9999;
+    /* Mantém a tela de carregamento acima de outros elementos */
+    opacity: 0.8;
+    transition: 0.3s ease-out;
+}
+
+/* Efeito de digitação para o texto de carregamento */
+#loading-text {
+    position: absolute;
+    /* Posiciona o texto no canto */
+    top: 10px;
+    /* Distância do topo */
+    left: 10px;
+    /* Distância da esquerda */
+    font-size: 20px;
+    /* Tamanho da fonte */
+    color: #F36161;
+    /* Cor do texto (pode mudar conforme sua necessidade) */
+    z-index: 10;
+    /* Para garantir que fique acima de outros elementos */
+    font-family: "VT323", monospace;
+    /* Aplica a fonte ao corpo do documento */
+
+
+
+
+}
+
+#conteudoPagina * {
+    opacity: 0;
+    transition: 0.3s ease-out;
 }
 
 .subheader {
-    background-color: #4F518C;
+    background-color: rgba(18, 33, 58, 0.6);
     display: flex;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+
+
 }
 
 .subheader h1 {
-    background-color: #2C2A4A;
-    color: #DABFFF;
+    color: #F36161;
     margin-left: 20vw;
     height: 100%;
     width: 60vw;
@@ -36,7 +126,7 @@ p {
 
 #menuzao {
     width: 100%;
-    background-color: #4F518C;
+    background-color: rgba(18, 33, 58, 0.6);
     height: 100%;
     display: flex;
     align-items: center;
@@ -45,11 +135,12 @@ p {
 
 header {
     width: 100%;
-    height: 15vh;
+    max-height: 10vh;
     align-items: center;
     display: flex;
     font-size: 40px;
     font-weight: bold;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
 
 }
 
@@ -66,7 +157,6 @@ header ul {
 }
 
 header ul a {
-    background-color: #2C2A4A;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -74,12 +164,15 @@ header ul a {
 }
 
 header ul li {
-    color: #DABFFF;
+    color: #F36161;
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: clamp(18px, 3.5vw, 28px);
+    font-family: "VT323", monospace;
+
 }
 
 a:link,
@@ -89,25 +182,35 @@ a:visited {
 }
 
 header ul a:hover>li {
-    background-color: #DABFFF;
-    color: #2C2A4A;
+    background-color: rgba(243, 97, 97, 0.6);
+    color: #12213A;
     transition: 0.3s ease-in-out;
+    box-shadow: 0 0 15px #F36161;
+
 
 }
 
 header ul a:not(:last-child) {
-    border-right: solid 2px #DABFFF;
+    border-right: solid 2px #F36161;
 }
 
 
 nav {
     display: flex;
     width: 100%;
-    background-color: #F4EFFA;
 }
+
+
 
 nav#introducao {
     min-height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+
+nav #direita {
+    display: flex;
+
 }
 
 nav #esquerda,
@@ -121,6 +224,8 @@ nav #esquerda {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+
 }
 
 nav #esquerda h1 {
@@ -144,20 +249,95 @@ nav #direita img {
     padding: 20px;
 }
 
+.carrossel {
+    position: relative;
+    width: 100%;
+    /* Limita a largura máxima do carrossel */
+    margin: 30px auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow-x: hidden;
+}
+
+.carrossel-conteudo {
+    display: flex;
+    transition: transform 0.5s ease;
+    transform: translateX(0);
+    /* Centraliza o conteúdo no contêiner */
+}
+
+.item {
+    min-width: 500px;
+    margin: 0 auto;
+    /* Centraliza cada item */
+    transition: transform 0.5s ease, filter 0.5s ease;
+    display: flex;
+    justify-content: center;
+}
+
+.item.inativo {
+    filter: blur(5px);
+    transform: rotate(10deg);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.inativo a {
+    pointer-events: none;
+    cursor: default;
+}
+
+.item.ativo {
+    filter: none;
+    transform: rotate(0deg);
+    opacity: 1;
+}
+
+
+
+.nav-btn {
+    background-color: #E24848;
+    /* Cor do botão */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#prevBtn {
+    left: 10px;
+    z-index: 1;
+    /* Ajuste a posição do botão à esquerda */
+}
+
+#nextBtn {
+    right: 10px;
+    /* Ajuste a posição do botão à direita */
+}
+
+.imagemProjeto {
+    user-select: none;
+    max-width: 50vw;
+}
+
 #portfolio {
     display: flex;
     flex-direction: column;
 }
 
 .portfoliotitulo {
-    background-color: #C8B1E4;
-    padding: 40px;
-    margin: 40px;
+    background-color: #12213A;
+    padding: 20px;
+    margin: 20px;
     border-radius: 15px;
 }
 
 #portfolioconteudo {
-    background-color: #F4EFFA;
     width: 100%;
 
 }
@@ -170,10 +350,23 @@ nav #direita img {
     justify-content: center;
 }
 
+#principal div {
+
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente, se necessário */
+    height: 100%;
+    /* Ajuste se precisar centralizar verticalmente */
+    margin: 30px;
+
+}
+
 
 .pt {
     width: 50%;
-    background-color: #b8abe2;
+    background-color: #12213A;
     margin-bottom: 50px;
     padding: 15px;
     border-radius: 5px;
@@ -186,22 +379,26 @@ nav #direita img {
 }
 
 #pa {
+    width: 50vw;
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 55vh;
+    justify-content: center;
 }
 
 #printfortes {
-    width: 50%;
+    width: inherit;
     border-radius: 5px;
     border: solid 1px black;
     height: fit-content;
+    /* Adiciona a transição na classe principal */
+    user-select: none;
+    transition: 0.3s ease;
+
 }
 
 #printfortes:hover {
-    width: 55%;
-    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+    /* Aumenta o tamanho sem alterar o layout */
 }
 
 #linha1 img,
@@ -229,23 +426,20 @@ nav #direita img {
 
 #servicos {
     display: flex;
-    background-color: #F4EFFA;
     flex-direction: column;
 }
 
 #servicos_conteudo {
-    background-color: #F4EFFA;
     display: flex;
     height: 80vh;
     justify-content: center;
 }
 
 #servicos_esquerda {
-    width: 60%;
-    color: #DABFFF;
+    width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 #servicos_direita {
@@ -253,33 +447,54 @@ nav #direita img {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: clip;
+
 }
 
 #servicos_direita img {
-    width: 70%;
-    height: auto;
-    max-height: 600px;
+    opacity: 0.8;
+    height: 100%;
+    -webkit-user-drag: none;
+    user-select: none;
 }
 
-#servicos_texto {
+.textBox {
     padding: 5%;
+    width: 60%;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-#servicos_texto h1 {
-    margin-right: 2%;
-    font-style: bold;
-    border-bottom: solid #DABFFF 1px;
-    padding-right: 5%;
+.textBox h1 {
+    width: fit-content;
+    border-bottom: solid #ffffff 3px;
 }
 
-#servicos_texto p {
+.textBox p {
     margin-top: 5%;
 }
 
 #redes_sociais {
-    background-color: #C8B1E4;
+    background-color: rgba(243, 97, 97, 0.9);
+    box-shadow: 0 0 15px rgba(243, 97, 97, 1);
     width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+#redes_sociais>div {
+    display: flex;
+    flex-direction: column;
+    /* Coloca as seções uma em cima da outra */
+    align-items: center;
+    /* Centraliza horizontalmente as seções */
+}
+
 
 #redes_sociais img {
     height: 40px
@@ -302,16 +517,18 @@ nav #direita img {
     align-items: center;
 }
 
-h1,
-li {
-    font-family: sans-serif;
+#LainDancando {
+    margin-left: 20px;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    /* Espaçamento à esquerda do elemento LainDancando */
 }
 
-h4,
-p,
-h3 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+#LainDancando img {
+    height: 100%;
 }
+
 
 @media only screen and (max-width: 1000px) {
 
@@ -339,10 +556,10 @@ h3 {
         flex-direction: column-reverse;
     }
 
+
     nav #esquerda,
     nav #direita {
         width: auto;
-        min-height: 40vh;
     }
 
 
@@ -354,9 +571,41 @@ h3 {
         height: 20vh;
     }
 
-    #servicos_direita {
-        display: none;
-
+    #servicos_conteudo {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
+
+    .textBox {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 30px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+        /* sombra com efeito esfumaçado */
+    }
+
+    #servicos_direita {
+        position: relative;
+        width: 100%;
+        overflow-x: clip;
+        /* Evita rolagem horizontal */
+    }
+
+    #servicos_direita img {
+        position: absolute;
+        width: 150vw;
+        /* Igual à largura da viewport */
+        height: auto;
+        max-width: none;
+        /* Permite expandir para além do limite */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* Centraliza a imagem */
+        z-index: -1;
+    }
+
+
+
 
 }
